@@ -24,8 +24,22 @@ public class StringStuff {
         System.out.println(reverse(input));
     }
 
+    public static String repeat(char c, int count) {
+        String result = "";
+        for (int i = 0; i < count; ++i) {
+            result += c;
+        }
+        return result;
+    }
+
+    public static void underline(String text, char underlineChar) {
+        System.out.println(text);
+        String underline = repeat(underlineChar, text.length());
+        System.out.println(underline);
+    }
+
     public static void main(String[] args) {
-        printReverse("Hello, world!");
+        underline("I love Access Code!", '*');
     }
 
 }
