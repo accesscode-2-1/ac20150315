@@ -72,14 +72,30 @@ public class StringStuff {
         return substring(text, start, text.length());
     }
 
-    public static void main(String[] args) {
-        String text = "Wassup Access Code.";
-        System.out.println("<" + substring(text, 7, 13) + ">");
-        System.out.println("<" + substring(text, 4, 14) + ">");
-        System.out.println("<" + substring(text, 10) + ">");
+    public static String swapHalves(String text) {
+        int midpoint = text.length() / 2;
+        return text.substring(midpoint) + text.substring(0, midpoint);
+    }
 
-        System.out.println("Hello, world!");
-        System.out.println(3 + 4);
+    public static void printTriangle(String text) {
+        for (int i = 1; i <= text.length(); i++) {
+            System.out.println(text.substring(0, i));
+        }
+    }
+
+    public static void printUpperTriangle(String text) {
+        int len = text.length();
+        for (int i = 0; i < len; i++) {
+            // String substr = text.substring(i);
+            // String paddedSubstr = repeat('#', i) + substr;
+            // System.out.println(paddedSubstr);
+
+            System.out.println(pad(text.substring(i), len, ' ', true));
+        }
+    }
+
+    public static void main(String[] args) {
+        printUpperTriangle("Hello, world!");
     }
 
 }
