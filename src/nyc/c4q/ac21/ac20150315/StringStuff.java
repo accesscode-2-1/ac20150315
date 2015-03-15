@@ -60,9 +60,17 @@ public class StringStuff {
         return pad(text, length, padChar, false);
     }
 
+    public static String substring(String text, int start, int end) {
+        String result = "";
+        for (int i = start; i < end; ++i) {
+            result += text.charAt(i);
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
-        System.out.println(pad("Good morning!", 20, '*', true));
-        System.out.println(pad("Good morning!", 20, '*', false));
+        String text = "Wassup Access Code.";
+        System.out.println(substring(text, 7, 13));
     }
 
 }
