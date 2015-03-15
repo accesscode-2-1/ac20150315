@@ -38,8 +38,18 @@ public class StringStuff {
         System.out.println(underline);
     }
 
+    public static void printBoxTop(String text) {
+        System.out.println("+" + repeat('-', text.length() + 2) + "+");
+    }
+
+    public static void printInBox(String text) {
+        printBoxTop(text);
+        System.out.println("| " + text + " |");
+        printBoxTop(text);
+    }
+
     public static void main(String[] args) {
-        underline("I love Access Code!", '*');
+        printInBox("I love Access Code!");
     }
 
 }
