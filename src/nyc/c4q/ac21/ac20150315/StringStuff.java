@@ -48,16 +48,16 @@ public class StringStuff {
         printBoxTop(text);
     }
 
-    public static String pad(String text, int length, char padChar) {
-        return text + repeat(padChar, length - text.length());
-    }
-
     public static String pad(String text, int length, char padChar, boolean left) {
         String padding = repeat(padChar, length - text.length());
         if (left)
             return padding + text;
         else
             return text + padding;
+    }
+
+    public static String pad(String text, int length, char padChar) {
+        return pad(text, length, padChar, false);
     }
 
     public static void main(String[] args) {
