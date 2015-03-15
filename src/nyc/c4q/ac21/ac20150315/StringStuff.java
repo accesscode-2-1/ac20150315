@@ -62,15 +62,24 @@ public class StringStuff {
 
     public static String substring(String text, int start, int end) {
         String result = "";
-        for (int i = start; i < end; ++i) {
+        for (int i = start; i < end; i++) {
             result += text.charAt(i);
         }
         return result;
     }
 
+    public static String substring(String text, int start) {
+        return substring(text, start, text.length());
+    }
+
     public static void main(String[] args) {
         String text = "Wassup Access Code.";
-        System.out.println(substring(text, 7, 13));
+        System.out.println("<" + substring(text, 7, 13) + ">");
+        System.out.println("<" + substring(text, 4, 14) + ">");
+        System.out.println("<" + substring(text, 10) + ">");
+
+        System.out.println("Hello, world!");
+        System.out.println(3 + 4);
     }
 
 }
